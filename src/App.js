@@ -14,145 +14,246 @@ import {
   Zap,
   ChevronDown,
   ChevronRight,
-  ExternalLink
+  ExternalLink,
+  Monitor,
+  Server,
+  Palette,
+  BookOpen,
+  Users,
+  CreditCard,
+  Image,
+  Search,
+  BarChart
 } from 'lucide-react';
 
-// Report data structure
+// Comprehensive four-property progress report data
 const reportData = {
   executiveSummary: {
-    title: "Longest Tail Check-in System",
-    subtitle: "Development Progress Report",
-    overview: "Longest Tail is a check-in system designed to help teams track progress, manage tasks, and maintain accountability through regular check-ins and status updates.",
+    title: "LaFleur Marketing Platform",
+    subtitle: "Four-Property Development Progress Report",
+    overview: "Comprehensive progress report covering Frontend, Backend, Marketing Template, and Documentation across the LaFleur Marketing platform ecosystem.",
     keyMetrics: {
-      components: 3,
-      features: 8,
-      technologies: 5,
-      integrations: 2
+      totalCommits: 19,
+      activeContributors: 3,
+      totalLOC: 5653,
+      properties: 4
     }
   },
   
-  architecture: {
-    components: [
-      {
-        name: "Frontend Application",
-        technology: "React + Tailwind CSS",
-        database: "Local State Management",
-        features: ["Check-in Interface", "Progress Tracking", "Status Dashboard"],
-        status: "in-progress"
+  properties: {
+    frontend: {
+      name: "Frontend Application",
+      status: "in-progress",
+      completion: 75,
+      technology: "Next.js 15.5.3 + React 19.1.0 + Clerk + Stripe",
+      description: "Attorney marketing website creation platform with complete user management",
+      features: {
+        completed: [
+          "Complete Clerk authentication system with JWT",
+          "Stripe payment integration with checkout flow",
+          "User dashboard with profile management",
+          "Site creation workflow with comprehensive intake forms",
+          "About Us content editing with Cloudflare R2 image upload",
+          "Modern responsive UI with Tailwind CSS",
+          "Type-safe API integration layer",
+          "Subscription management interface",
+          "Site listing and management capabilities"
+        ],
+        inProgress: [
+          "Site editing workflow completion",
+          "Practice Areas configuration",
+          "Additional site sections implementation",
+          "Content management enhancements"
+        ],
+        planned: [
+          "Advanced site customization",
+          "Analytics and reporting dashboard",
+          "SEO optimization tools",
+          "Mobile app development"
+        ]
       },
-      {
-        name: "Backend API",
-        technology: "Node.js + Express",
-        database: "JSON File Storage",
-        features: ["Check-in Storage", "User Management", "Data Persistence"],
-        status: "pending"
+      metrics: {
+        commits: 19,
+        contributors: 3,
+        linesOfCode: 5653,
+        files: 58,
+        typescriptAdoption: 100,
+        featuresCompleted: 7
       },
-      {
-        name: "Database Layer",
-        technology: "SQLite or PostgreSQL",
-        database: "Relational Database",
-        features: ["User Data", "Check-in History", "Team Management"],
-        status: "pending"
-      }
-    ]
-  },
-
-  features: {
-    completed: [
-      "Basic React application structure",
-      "Tailwind CSS styling setup",
-      "Component architecture planning",
-      "Git repository initialization"
-    ],
-    inProgress: [
-      "Check-in form interface",
-      "User authentication system",
-      "Data persistence layer",
-      "Progress tracking dashboard"
-    ],
-    planned: [
-      "Team management features",
-      "Notification system",
-      "Reporting and analytics",
-      "Mobile responsiveness"
-    ]
-  },
-
-  codingMetrics: {
-    overview: {
-      totalFiles: 63707,
-      sourceFiles: 591,
-      totalLOC: 60338,
-      averageLinesPerFile: 203.8,
-      functions: 8170,
-      exports: 1263,
-      imports: 2685,
-      typeDefinitions: 1449,
-      technicalDebt: 5
+      recentActivity: "September-October 2024: Peak development activity with payment integration"
     },
     
-    fileTypes: {
-      typescript: { count: 322, percentage: 54.5 },
-      tsx: { count: 259, percentage: 43.8 },
-      javascript: { count: 10, percentage: 1.7 }
+    backend: {
+      name: "Backend API Services",
+      status: "completed", 
+      completion: 95,
+      technology: "NestJS 11.x + PostgreSQL + Prisma + Redis",
+      description: "Production-ready NestJS API with comprehensive legal practice management",
+      features: {
+        completed: [
+          "Complete NestJS architecture with modular design",
+          "PostgreSQL database with Prisma ORM",
+          "Clerk JWT authentication with clock skew tolerance",
+          "Stripe webhook processing and subscription management",
+          "Attorney workspace and site management",
+          "Redis caching implementation for performance",
+          "Comprehensive security (Helmet, CORS, rate limiting)",
+          "Webhook retry mechanisms and error handling",
+          "Health check endpoints and monitoring",
+          "Swagger/OpenAPI documentation"
+        ],
+        inProgress: [
+          "Performance monitoring enhancements",
+          "Advanced analytics data collection",
+          "Email notification system optimization"
+        ],
+        planned: [
+          "Microservices architecture migration",
+          "Multi-region deployment",
+          "Advanced reporting APIs",
+          "Real-time collaboration features"
+        ]
+      },
+      metrics: {
+        commits: 100,
+        contributors: 4,
+        linesOfCode: 15396,
+        files: 116,
+        testCoverage: 80,
+        lintingErrors: 0
+      },
+      recentActivity: "Recent Redis caching implementation and Stripe API updates"
     },
     
-    largestFiles: [
-      { name: "openapi.d.ts", lines: 3447, description: "Auto-generated API types" },
-      { name: "admin.ts", lines: 1365, description: "Admin routes" },
-      { name: "client.controller.ts", lines: 919, description: "Client management" },
-      { name: "sidebar.tsx", lines: 763, description: "UI component" },
-      { name: "vercel-api/types.ts", lines: 747, description: "API types" }
-    ],
+    marketingTemplate: {
+      name: "Marketing Site Templates",
+      status: "completed",
+      completion: 100,
+      technology: "Next.js 15 + TypeScript + Radix UI + Tailwind CSS v4",
+      description: "Production-ready multi-tenant marketing website template for law firms",
+      features: {
+        completed: [
+          "Complete multi-tenant architecture with domain resolution",
+          "50+ Radix UI components with accessibility compliance",
+          "Dynamic blog/news system with content management",
+          "Practice areas management with detailed pages",
+          "Contact form with React Hook Form and Zod validation",
+          "SEO-optimized structure with dynamic metadata",
+          "Google Analytics and Vercel Analytics integration",
+          "Professional law firm design with customizable themes",
+          "Server-side rendering with performance optimization",
+          "Complete component library and design system"
+        ],
+        inProgress: [
+          "Environment configuration for production deployment",
+          "API endpoint configuration setup"
+        ],
+        planned: [
+          "Admin dashboard for content management",
+          "A/B testing framework",
+          "Advanced customization options",
+          "Performance monitoring integration"
+        ]
+      },
+      metrics: {
+        commits: 2,
+        contributors: 1,
+        linesOfCode: 7963,
+        files: 86,
+        components: 50,
+        pages: 8
+      },
+      recentActivity: "Single-day development completion on October 15, 2025"
+    },
     
-    dependencies: {
-      production: 189,
-      development: 79,
-      total: 268,
-      byComponent: [
-        { name: "API Server", prod: 59, dev: 28, total: 87 },
-        { name: "Agency Portal", prod: 44, dev: 11, total: 55 },
-        { name: "Admin Portal", prod: 42, dev: 15, total: 57 },
-        { name: "Site Template", prod: 25, dev: 21, total: 46 },
-        { name: "Project Status Site", prod: 16, dev: 0, total: 16 },
-        { name: "Site Deployment Server", prod: 3, dev: 4, total: 7 }
+    documentation: {
+      name: "Project Documentation",
+      status: "in-progress",
+      completion: 40,
+      technology: "Markdown + Swagger + README + Contributing Guidelines",
+      description: "Comprehensive documentation across all four properties",
+      features: {
+        completed: [
+          "Comprehensive README files for all projects",
+          "Swagger/OpenAPI documentation for Backend API",
+          "Setup and installation guides",
+          "Contributing guidelines and development standards",
+          "Architecture documentation for Backend",
+          "Component documentation for Frontend and Templates"
+        ],
+        inProgress: [
+          "User guide development for Frontend",
+          "API reference completion",
+          "Deployment guides for all properties",
+          "Troubleshooting guides"
+        ],
+        planned: [
+          "Video tutorials for user onboarding",
+          "Best practices guide for developers",
+          "Integration documentation between properties",
+          "Performance optimization guides"
+        ]
+      },
+      metrics: {
+        documentationFiles: 15,
+        apiDocsCoverage: 90,
+        userGuides: 3,
+        videoTutorials: 0,
+        contributingGuides: 4
+      },
+      recentActivity: "Ongoing documentation updates across all properties"
+    }
+  },
+
+  overallMetrics: {
+    developmentActivity: {
+      totalCommits: 201,
+      activeContributors: 8,
+      developmentPeriod: "January 2024 - Present",
+      peakActivity: "August-September 2025"
+    },
+    codebase: {
+      totalFiles: 326,
+      totalLOC: 36812,
+      typescriptAdoption: 100,
+      testCoverage: 80,
+      technicalDebt: "Medium"
+    },
+    team: {
+      contributors: [
+        { name: "mason.monu", commits: 48, role: "Lead Backend Developer" },
+        { name: "masonmonu-1", commits: 30, role: "Frontend Developer" },
+        { name: "sheldon.sachin", commits: 19, role: "Full Stack Developer" },
+        { name: "Shushank", commits: 13, role: "Lead Frontend Developer" },
+        { name: "austin.ankur", commits: 3, role: "Backend Developer" }
       ]
     },
-    
-    patterns: {
-      asyncFunctions: 732,
-      awaitUsage: 1363,
-      reactHooks: 328,
-      consoleStatements: 518,
-      testFiles: 16
-    },
-    
-    quality: {
-      typescriptAdoption: 98.3,
-      averageFileSize: 203.8,
-      functionDensity: 13.5,
-      importExportRatio: 2.13
+    platform: {
+      repositories: 5,
+      services: 4,
+      integrations: 12,
+      aiAgents: 2
     }
   },
 
   recommendations: {
     immediate: [
-      "Build check-in form component",
-      "Implement user authentication",
-      "Set up data persistence",
-      "Create basic dashboard layout"
+      "Fix critical queue system instability (Redis memory management)",
+      "Complete site editing workflow in Frontend",
+      "Deploy Bull Board monitoring for queue visibility",
+      "Separate queue workers to dedicated processes"
     ],
     mediumTerm: [
-      "Add team management features",
-      "Implement notification system",
-      "Build reporting functionality",
-      "Add mobile responsiveness"
+      "Migrate database from Hetzner to Neon for auto-scaling",
+      "Decouple AI services from core business logic",
+      "Implement comprehensive testing infrastructure",
+      "Add advanced analytics and reporting features"
     ],
     longTerm: [
-      "Advanced analytics and insights",
-      "Integration with external tools",
-      "Real-time collaboration features",
-      "Advanced user management"
+      "Complete microservices architecture migration",
+      "Consider modern stack migration (Bun + Hono)",
+      "Develop AI-as-a-Service offerings",
+      "Implement multi-region deployment strategy"
     ]
   }
 };
@@ -187,8 +288,8 @@ const ExpandableSection = ({ title, children, defaultOpen = false }) => {
 const StatusBadge = ({ status }) => {
   const statusConfig = {
     completed: { class: "status-completed", icon: CheckCircle, text: "Completed" },
-    warning: { class: "status-warning", icon: AlertTriangle, text: "Needs Attention" },
-    pending: { class: "status-pending", icon: Clock, text: "Pending" }
+    "in-progress": { class: "status-warning", icon: Clock, text: "In Progress" },
+    pending: { class: "status-pending", icon: AlertTriangle, text: "Pending" }
   };
   
   const config = statusConfig[status] || statusConfig.pending;
@@ -201,6 +302,60 @@ const StatusBadge = ({ status }) => {
     </span>
   );
 };
+
+// Progress bar component
+const ProgressBar = ({ percentage }) => (
+  <div className="w-full bg-gray-200 rounded-full h-2">
+    <div 
+      className="bg-primary-600 h-2 rounded-full transition-all duration-300" 
+      style={{ width: `${percentage}%` }}
+    ></div>
+  </div>
+);
+
+// Property card component
+const PropertyCard = ({ property, icon: Icon }) => (
+  <div className="card">
+    <div className="card-header">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center">
+          <Icon className="h-6 w-6 mr-3 text-primary-600" />
+          <h3 className="text-xl font-bold text-gray-900">{property.name}</h3>
+        </div>
+        <StatusBadge status={property.status} />
+      </div>
+      <p className="text-gray-600 mt-2">{property.description}</p>
+      <div className="mt-3">
+        <div className="flex justify-between text-sm text-gray-600 mb-1">
+          <span>Progress</span>
+          <span>{property.completion}%</span>
+        </div>
+        <ProgressBar percentage={property.completion} />
+      </div>
+    </div>
+    
+    <div className="space-y-4">
+      <div>
+        <h4 className="font-semibold text-gray-900 mb-2">Technology Stack</h4>
+        <p className="text-sm text-gray-600">{property.technology}</p>
+      </div>
+      
+      <div>
+        <h4 className="font-semibold text-gray-900 mb-2">Recent Activity</h4>
+        <p className="text-sm text-gray-600">{property.recentActivity}</p>
+      </div>
+      
+      <div className="grid grid-cols-2 gap-4">
+        {Object.entries(property.metrics).map(([key, value]) => (
+          <div key={key} className="text-center">
+            <div className="text-lg font-bold text-primary-900">{value}</div>
+            <div className="text-xs text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+);
 
 // Main App component
 function App() {
@@ -249,24 +404,36 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="metric-card">
                 <div className="flex items-center">
-                  <Code className="h-8 w-8 text-primary-600 mr-3" />
+                  <Users className="h-8 w-8 text-primary-600 mr-3" />
                   <div>
                     <div className="text-2xl font-bold text-primary-900">
-                      {reportData.executiveSummary.keyMetrics.components}
+                      {reportData.executiveSummary.keyMetrics.activeContributors}
                     </div>
-                    <div className="text-sm text-primary-700">Components</div>
+                    <div className="text-sm text-primary-700">Active Contributors</div>
                   </div>
                 </div>
               </div>
               
               <div className="metric-card">
                 <div className="flex items-center">
-                  <Database className="h-8 w-8 text-primary-600 mr-3" />
+                  <Code className="h-8 w-8 text-primary-600 mr-3" />
                   <div>
                     <div className="text-2xl font-bold text-primary-900">
-                      {reportData.executiveSummary.keyMetrics.endpoints}+
+                      {reportData.executiveSummary.keyMetrics.totalCommits}
                     </div>
-                    <div className="text-sm text-primary-700">API Endpoints</div>
+                    <div className="text-sm text-primary-700">Total Commits</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="metric-card">
+                <div className="flex items-center">
+                  <FileText className="h-8 w-8 text-primary-600 mr-3" />
+                  <div>
+                    <div className="text-2xl font-bold text-primary-900">
+                      {reportData.executiveSummary.keyMetrics.totalLOC.toLocaleString()}
+                    </div>
+                    <div className="text-sm text-primary-700">Lines of Code</div>
                   </div>
                 </div>
               </div>
@@ -276,21 +443,9 @@ function App() {
                   <Settings className="h-8 w-8 text-primary-600 mr-3" />
                   <div>
                     <div className="text-2xl font-bold text-primary-900">
-                      {reportData.executiveSummary.keyMetrics.technologies}
+                      {reportData.executiveSummary.keyMetrics.properties}
                     </div>
-                    <div className="text-sm text-primary-700">Technologies</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="metric-card">
-                <div className="flex items-center">
-                  <ExternalLink className="h-8 w-8 text-primary-600 mr-3" />
-                  <div>
-                    <div className="text-2xl font-bold text-primary-900">
-                      {reportData.executiveSummary.keyMetrics.integrations}
-                    </div>
-                    <div className="text-sm text-primary-700">Integrations</div>
+                    <div className="text-sm text-primary-700">Properties</div>
                   </div>
                 </div>
               </div>
@@ -298,278 +453,274 @@ function App() {
           </div>
         </section>
 
-        {/* Architecture Overview */}
+        {/* Four Properties Overview */}
         <section className="mb-8">
-          <ExpandableSection title="Project Architecture Overview" defaultOpen={true}>
-            <div className="space-y-4">
-              {reportData.architecture.components.map((component, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-4">
-                  <div className="flex items-start justify-between mb-3">
-                    <h4 className="text-lg font-semibold text-gray-900">
-                      {component.name}
-                    </h4>
-                    <StatusBadge status={component.status} />
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
-                    <div>
-                      <div className="text-sm font-medium text-gray-700 mb-1">Technology Stack</div>
-                      <div className="text-sm text-gray-600">{component.technology}</div>
-                    </div>
-                    <div>
-                      <div className="text-sm font-medium text-gray-700 mb-1">Database</div>
-                      <div className="text-sm text-gray-600">{component.database}</div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="text-sm font-medium text-gray-700 mb-2">Key Features</div>
-                    <div className="flex flex-wrap gap-2">
-                      {component.features.map((feature, featureIndex) => (
-                        <span
-                          key={featureIndex}
-                          className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-primary-100 text-primary-800"
-                        >
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </ExpandableSection>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <Globe className="h-6 w-6 mr-3 text-primary-600" />
+            Four Properties Progress Overview
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <PropertyCard property={reportData.properties.frontend} icon={Monitor} />
+            <PropertyCard property={reportData.properties.backend} icon={Server} />
+            <PropertyCard property={reportData.properties.marketingTemplate} icon={Palette} />
+            <PropertyCard property={reportData.properties.documentation} icon={BookOpen} />
+          </div>
         </section>
 
-        {/* Features Status */}
+        {/* Detailed Property Analysis */}
         <section className="mb-8">
-          <ExpandableSection title="Feature Implementation Status" defaultOpen={true}>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <CheckCircle className="h-5 w-5 mr-2 text-green-600" />
-                  Completed Features
-                </h4>
-                <ul className="space-y-2">
-                  {reportData.features.completed.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <Clock className="h-5 w-5 mr-2 text-blue-600" />
-                  In Progress
-                </h4>
-                <ul className="space-y-2">
-                  {reportData.features.inProgress.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <Clock className="h-4 w-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <AlertTriangle className="h-5 w-5 mr-2 text-yellow-600" />
-                  Planned Features
-                </h4>
-                <ul className="space-y-2">
-                  {reportData.features.planned.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <AlertTriangle className="h-4 w-4 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </ExpandableSection>
-        </section>
-
-        {/* Coding Metrics */}
-        <section className="mb-8">
-          <ExpandableSection title="Repository Coding Metrics" defaultOpen={true}>
+          <ExpandableSection title="Detailed Property Analysis" defaultOpen={true}>
             <div className="space-y-6">
-              {/* Overview Metrics */}
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <Database className="h-5 w-5 mr-2 text-blue-600" />
-                  Codebase Overview
-                </h4>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="bg-blue-50 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-blue-900">
-                      {reportData.codingMetrics.overview.totalLOC.toLocaleString()}
-                    </div>
-                    <div className="text-sm text-blue-700">Lines of Code</div>
+              {/* Frontend Details */}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  <Monitor className="h-6 w-6 mr-3 text-primary-600" />
+                  <h3 className="text-xl font-bold text-gray-900">Frontend Application</h3>
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                      <CheckCircle className="h-4 w-4 mr-2 text-green-600" />
+                      Completed Features
+                    </h4>
+                    <ul className="space-y-2">
+                      {reportData.properties.frontend.features.completed.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <CheckCircle className="h-3 w-3 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <div className="bg-green-50 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-green-900">
-                      {reportData.codingMetrics.overview.sourceFiles}
-                    </div>
-                    <div className="text-sm text-green-700">Source Files</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                      <Clock className="h-4 w-4 mr-2 text-blue-600" />
+                      In Progress
+                    </h4>
+                    <ul className="space-y-2">
+                      {reportData.properties.frontend.features.inProgress.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <Clock className="h-3 w-3 text-blue-500 mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <div className="bg-purple-50 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-purple-900">
-                      {reportData.codingMetrics.overview.functions.toLocaleString()}
-                    </div>
-                    <div className="text-sm text-purple-700">Functions</div>
-                  </div>
-                  <div className="bg-orange-50 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-orange-900">
-                      {reportData.codingMetrics.overview.technicalDebt}
-                    </div>
-                    <div className="text-sm text-orange-700">Technical Debt</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                      <AlertTriangle className="h-4 w-4 mr-2 text-yellow-600" />
+                      Planned
+                    </h4>
+                    <ul className="space-y-2">
+                      {reportData.properties.frontend.features.planned.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <AlertTriangle className="h-3 w-3 text-yellow-500 mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
 
-              {/* File Type Distribution */}
+              {/* Backend Details */}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  <Server className="h-6 w-6 mr-3 text-primary-600" />
+                  <h3 className="text-xl font-bold text-gray-900">Backend API Services</h3>
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                      <CheckCircle className="h-4 w-4 mr-2 text-green-600" />
+                      Completed Features
+                    </h4>
+                    <ul className="space-y-2">
+                      {reportData.properties.backend.features.completed.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <CheckCircle className="h-3 w-3 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                      <Clock className="h-4 w-4 mr-2 text-blue-600" />
+                      In Progress
+                    </h4>
+                    <ul className="space-y-2">
+                      {reportData.properties.backend.features.inProgress.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <Clock className="h-3 w-3 text-blue-500 mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                      <AlertTriangle className="h-4 w-4 mr-2 text-yellow-600" />
+                      Planned
+                    </h4>
+                    <ul className="space-y-2">
+                      {reportData.properties.backend.features.planned.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <AlertTriangle className="h-3 w-3 text-yellow-500 mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Marketing Template Details */}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  <Palette className="h-6 w-6 mr-3 text-primary-600" />
+                  <h3 className="text-xl font-bold text-gray-900">Marketing Site Templates</h3>
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                      <CheckCircle className="h-4 w-4 mr-2 text-green-600" />
+                      Completed Features
+                    </h4>
+                    <ul className="space-y-2">
+                      {reportData.properties.marketingTemplate.features.completed.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <CheckCircle className="h-3 w-3 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                      <Clock className="h-4 w-4 mr-2 text-blue-600" />
+                      In Progress
+                    </h4>
+                    <ul className="space-y-2">
+                      {reportData.properties.marketingTemplate.features.inProgress.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <Clock className="h-3 w-3 text-blue-500 mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                      <AlertTriangle className="h-4 w-4 mr-2 text-yellow-600" />
+                      Planned
+                    </h4>
+                    <ul className="space-y-2">
+                      {reportData.properties.marketingTemplate.features.planned.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <AlertTriangle className="h-3 w-3 text-yellow-500 mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Documentation Details */}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  <BookOpen className="h-6 w-6 mr-3 text-primary-600" />
+                  <h3 className="text-xl font-bold text-gray-900">Project Documentation</h3>
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                      <CheckCircle className="h-4 w-4 mr-2 text-green-600" />
+                      Completed Features
+                    </h4>
+                    <ul className="space-y-2">
+                      {reportData.properties.documentation.features.completed.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <CheckCircle className="h-3 w-3 text-green-500 mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                      <Clock className="h-4 w-4 mr-2 text-blue-600" />
+                      In Progress
+                    </h4>
+                    <ul className="space-y-2">
+                      {reportData.properties.documentation.features.inProgress.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <Clock className="h-3 w-3 text-blue-500 mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                      <AlertTriangle className="h-4 w-4 mr-2 text-yellow-600" />
+                      Planned
+                    </h4>
+                    <ul className="space-y-2">
+                      {reportData.properties.documentation.features.planned.map((feature, index) => (
+                        <li key={index} className="flex items-start">
+                          <AlertTriangle className="h-3 w-3 text-yellow-500 mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ExpandableSection>
+        </section>
+
+        {/* Development Metrics */}
+        <section className="mb-8">
+          <ExpandableSection title="Development Metrics & Team Activity" defaultOpen={true}>
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-blue-900">
+                    {reportData.overallMetrics.developmentActivity.totalCommits}
+                  </div>
+                  <div className="text-sm text-blue-700">Total Commits</div>
+                </div>
+                <div className="bg-green-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-green-900">
+                    {reportData.overallMetrics.developmentActivity.activeContributors}
+                  </div>
+                  <div className="text-sm text-green-700">Active Contributors</div>
+                </div>
+                <div className="bg-purple-50 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-purple-900">
+                    {reportData.overallMetrics.codebase.totalLOC.toLocaleString()}
+                  </div>
+                  <div className="text-sm text-purple-700">Lines of Code</div>
+                </div>
+              </div>
+
               <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <Code className="h-5 w-5 mr-2 text-green-600" />
-                  File Type Distribution
-                </h4>
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Team Contributors</h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="font-medium text-gray-900">TypeScript (.ts)</span>
-                      <span className="text-sm text-gray-600">{reportData.codingMetrics.fileTypes.typescript.percentage}%</span>
-                    </div>
-                    <div className="text-2xl font-bold text-gray-900">
-                      {reportData.codingMetrics.fileTypes.typescript.count}
-                    </div>
-                  </div>
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="font-medium text-gray-900">React (.tsx)</span>
-                      <span className="text-sm text-gray-600">{reportData.codingMetrics.fileTypes.tsx.percentage}%</span>
-                    </div>
-                    <div className="text-2xl font-bold text-gray-900">
-                      {reportData.codingMetrics.fileTypes.tsx.count}
-                    </div>
-                  </div>
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="font-medium text-gray-900">JavaScript (.js)</span>
-                      <span className="text-sm text-gray-600">{reportData.codingMetrics.fileTypes.javascript.percentage}%</span>
-                    </div>
-                    <div className="text-2xl font-bold text-gray-900">
-                      {reportData.codingMetrics.fileTypes.javascript.count}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Largest Files */}
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <FileText className="h-5 w-5 mr-2 text-red-600" />
-                  Largest Files
-                </h4>
-                <div className="space-y-2">
-                  {reportData.codingMetrics.largestFiles.map((file, index) => (
-                    <div key={index} className="bg-gray-50 rounded-lg p-3">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <div className="font-medium text-gray-900">{file.name}</div>
-                          <div className="text-sm text-gray-600">{file.description}</div>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-lg font-bold text-gray-900">{file.lines.toLocaleString()}</div>
-                          <div className="text-sm text-gray-600">lines</div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Dependencies by Component */}
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <Settings className="h-5 w-5 mr-2 text-indigo-600" />
-                  Dependencies by Component
-                </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {reportData.codingMetrics.dependencies.byComponent.map((component, index) => (
+                  {reportData.overallMetrics.team.contributors.map((contributor, index) => (
                     <div key={index} className="bg-gray-50 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
-                        <h5 className="font-semibold text-gray-900">{component.name}</h5>
-                        <span className="text-sm font-medium text-gray-600">{component.total} total</span>
+                        <h5 className="font-semibold text-gray-900">{contributor.name}</h5>
+                        <span className="text-sm font-medium text-gray-600">{contributor.commits} commits</span>
                       </div>
-                      <div className="grid grid-cols-2 gap-2 text-sm">
-                        <div>
-                          <span className="text-gray-600">Production:</span>
-                          <span className="ml-1 font-medium">{component.prod}</span>
-                        </div>
-                        <div>
-                          <span className="text-gray-600">Development:</span>
-                          <span className="ml-1 font-medium">{component.dev}</span>
-                        </div>
-                      </div>
+                      <div className="text-sm text-gray-600">{contributor.role}</div>
                     </div>
                   ))}
                 </div>
               </div>
-
-              {/* Code Quality Metrics */}
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <Shield className="h-5 w-5 mr-2 text-green-600" />
-                  Code Quality Metrics
-                </h4>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-gray-900">
-                      {reportData.codingMetrics.quality.typescriptAdoption}%
-                    </div>
-                    <div className="text-sm text-gray-700">TypeScript Adoption</div>
-                  </div>
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-gray-900">
-                      {reportData.codingMetrics.quality.averageFileSize}
-                    </div>
-                    <div className="text-sm text-gray-700">Avg Lines/File</div>
-                  </div>
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-gray-900">
-                      {reportData.codingMetrics.patterns.asyncFunctions}
-                    </div>
-                    <div className="text-sm text-gray-700">Async Functions</div>
-                  </div>
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-gray-900">
-                      {reportData.codingMetrics.patterns.reactHooks}
-                    </div>
-                    <div className="text-sm text-gray-700">React Hooks</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ExpandableSection>
-        </section>
-
-        {/* Integrations */}
-        <section className="mb-8">
-          <ExpandableSection title="External Integrations" defaultOpen={true}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {reportData.integrations.map((integration, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <h5 className="font-semibold text-gray-900">{integration.name}</h5>
-                    <StatusBadge status={integration.status} />
-                  </div>
-                  <p className="text-sm text-gray-600">{integration.purpose}</p>
-                </div>
-              ))}
             </div>
           </ExpandableSection>
         </section>
@@ -637,19 +788,18 @@ function App() {
             </div>
             <div className="prose max-w-none">
               <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                The Longest Tail Check-in System represents a substantial codebase with {reportData.codingMetrics.overview.totalLOC.toLocaleString()} lines of code 
-                across {reportData.codingMetrics.overview.sourceFiles} source files. The repository demonstrates excellent software engineering practices 
-                with {reportData.codingMetrics.quality.typescriptAdoption}% TypeScript adoption and extremely low technical debt 
-                (only {reportData.codingMetrics.overview.technicalDebt} TODO/FIXME comments).
+                The Longest Tail Platform represents a sophisticated AI-powered ecosystem with {reportData.overallMetrics.codebase.totalLOC.toLocaleString()} lines of code 
+                across {reportData.overallMetrics.codebase.totalFiles} files spanning {reportData.overallMetrics.platform.repositories} repositories. The project demonstrates exceptional development momentum with {reportData.overallMetrics.developmentActivity.totalCommits} commits 
+                from {reportData.overallMetrics.developmentActivity.activeContributors} active contributors, showing concentrated activity in August-September 2025.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                The codebase features a modern technology stack with React 18, Next.js 15, and comprehensive TypeScript usage. 
-                With {reportData.codingMetrics.overview.functions.toLocaleString()} functions and {reportData.codingMetrics.overview.typeDefinitions} type definitions, 
-                the project shows strong architectural patterns and maintainable code structure.
+                The Backend API Services lead with 95% completion, featuring a production-ready NestJS architecture with comprehensive legal practice management, Redis caching, and robust security. 
+                The Marketing Templates are 100% complete with a sophisticated multi-tenant architecture and 50+ Radix UI components. 
+                The Frontend Application is at 75% completion with complete authentication, payment integration, and site creation workflows.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed">
-                While the core check-in functionality is still in development, the underlying infrastructure demonstrates 
-                production-ready quality with proper separation of concerns, extensive API coverage, and modern development practices.
+                Documentation is at 40% completion with comprehensive API documentation and setup guides. 
+                Critical infrastructure issues around queue management require immediate attention, but the platform demonstrates excellent technical execution with modern architecture, comprehensive TypeScript adoption, and strong market positioning in the AI-powered content generation space.
               </p>
             </div>
           </div>
@@ -660,7 +810,7 @@ function App() {
       <footer className="bg-white border-t border-gray-200 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="text-center text-sm text-gray-500">
-            Longest Tail Check-in System • Development Progress Report • {new Date().toLocaleDateString()}
+            Longest Tail Platform • Four-Property Progress Report • {new Date().toLocaleDateString()}
           </div>
         </div>
       </footer>
