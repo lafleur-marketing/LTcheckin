@@ -83,8 +83,8 @@ const reportData = {
     
     backend: {
       name: "Backend API Services",
-      status: "completed", 
-      completion: 95,
+      status: "in-progress", 
+      completion: 80,
       technology: "NestJS 11.x + PostgreSQL + Prisma + Redis",
       description: "Production-ready NestJS API with comprehensive legal practice management",
       features: {
@@ -125,8 +125,8 @@ const reportData = {
     
     marketingTemplate: {
       name: "Marketing Site Templates",
-      status: "completed",
-      completion: 100,
+      status: "near-completion",
+      completion: 95,
       technology: "Next.js 15 + TypeScript + Radix UI + Tailwind CSS v4",
       description: "Production-ready multi-tenant marketing website template for law firms",
       features: {
@@ -287,6 +287,7 @@ const StatusBadge = ({ status }) => {
   const statusConfig = {
     completed: { class: "status-completed", icon: CheckCircle, text: "Completed" },
     "in-progress": { class: "status-warning", icon: Clock, text: "In Progress" },
+    "near-completion": { class: "status-completed", icon: CheckCircle, text: "Near Completion" },
     pending: { class: "status-pending", icon: AlertTriangle, text: "Pending" }
   };
   
@@ -841,8 +842,8 @@ function App() {
                 from {reportData.overallMetrics.developmentActivity.activeContributors} active contributors, showing concentrated activity in August-September 2025.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                The Backend API Services lead with 95% completion, featuring a production-ready NestJS architecture with comprehensive legal practice management, Redis caching, and robust security. 
-                The Marketing Templates are 100% complete with a sophisticated multi-tenant architecture and 50+ Radix UI components. 
+                The Backend API Services are at 80% completion with a robust NestJS architecture, comprehensive legal practice management, Redis caching, and strong security foundations. 
+                The Marketing Templates are near completion at 95% with a sophisticated multi-tenant architecture and 50+ Radix UI components. 
                 The Frontend Application is at 75% completion with complete authentication, payment integration, and site creation workflows.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed">
