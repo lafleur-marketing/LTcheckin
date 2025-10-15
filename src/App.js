@@ -5,7 +5,6 @@ import {
   AlertTriangle, 
   Clock, 
   Code, 
-  Database, 
   Globe, 
   Settings,
   FileText,
@@ -14,29 +13,28 @@ import {
   Zap,
   ChevronDown,
   ChevronRight,
-  ExternalLink,
   Monitor,
   Server,
   Palette,
   BookOpen,
-  Users,
-  CreditCard,
-  Image,
-  Search,
-  BarChart
+  Users
 } from 'lucide-react';
 
 // Comprehensive four-property progress report data
 const reportData = {
   executiveSummary: {
-    title: "LaFleur Marketing Platform",
+    title: "Longest Tail Platform",
     subtitle: "Four-Property Development Progress Report",
-    overview: "Comprehensive progress report covering Frontend, Backend, Marketing Template, and Documentation across the LaFleur Marketing platform ecosystem.",
+    overview: "Comprehensive progress report covering Frontend, Backend, Marketing Template, and Documentation across the Longest Tail AI-powered platform ecosystem.",
     keyMetrics: {
-      totalCommits: 19,
-      activeContributors: 3,
-      totalLOC: 5653,
-      properties: 4
+      totalCommits: 201,
+      activeContributors: 8,
+      totalLOC: 36812,
+      totalFiles: 326,
+      repositories: 5,
+      properties: 4,
+      testCoverage: 80,
+      typescriptAdoption: 100
     }
   },
   
@@ -441,6 +439,56 @@ function App() {
               <div className="metric-card">
                 <div className="flex items-center">
                   <Settings className="h-8 w-8 text-primary-600 mr-3" />
+                  <div>
+                    <div className="text-2xl font-bold text-primary-900">
+                      {reportData.executiveSummary.keyMetrics.repositories}
+                    </div>
+                    <div className="text-sm text-primary-700">Repositories</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+              <div className="metric-card">
+                <div className="flex items-center">
+                  <FileText className="h-8 w-8 text-primary-600 mr-3" />
+                  <div>
+                    <div className="text-2xl font-bold text-primary-900">
+                      {reportData.executiveSummary.keyMetrics.totalFiles}
+                    </div>
+                    <div className="text-sm text-primary-700">Total Files</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="metric-card">
+                <div className="flex items-center">
+                  <Shield className="h-8 w-8 text-primary-600 mr-3" />
+                  <div>
+                    <div className="text-2xl font-bold text-primary-900">
+                      {reportData.executiveSummary.keyMetrics.testCoverage}%
+                    </div>
+                    <div className="text-sm text-primary-700">Test Coverage</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="metric-card">
+                <div className="flex items-center">
+                  <Code className="h-8 w-8 text-primary-600 mr-3" />
+                  <div>
+                    <div className="text-2xl font-bold text-primary-900">
+                      {reportData.executiveSummary.keyMetrics.typescriptAdoption}%
+                    </div>
+                    <div className="text-sm text-primary-700">TypeScript</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="metric-card">
+                <div className="flex items-center">
+                  <Globe className="h-8 w-8 text-primary-600 mr-3" />
                   <div>
                     <div className="text-2xl font-bold text-primary-900">
                       {reportData.executiveSummary.keyMetrics.properties}
